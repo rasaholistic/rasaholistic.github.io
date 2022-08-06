@@ -80,6 +80,27 @@
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
+			<div> 
+			    <br/>
+		    	    <div id="eventbrite-widget-container-396312540477"></div>
+			    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+			    <script type="text/javascript">
+    				var exampleCallback = function() {
+        				console.log('Order complete!');
+    				};
+
+    				window.EBWidgets.createWidget({
+        				// Required
+        				widgetType: 'checkout',
+        				eventId: '396312540477',
+        				iframeContainerId: 'eventbrite-widget-container-396312540477',
+
+        				// Optional
+        				iframeContainerHeight: 750,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+        				onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+    				});
+				</script>
+		    </div>
           <div class="col-md-12 heading-section ftco-animate text-center">
             <h2 class="mb-1">Class Time Table</h2>
           </div>
@@ -215,27 +236,6 @@
                   </tr>
                 </tfoot>
               </table>
-		    <div> 
-			    <br/>
-		    	    <div id="eventbrite-widget-container-396312540477"></div>
-			    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-			    <script type="text/javascript">
-    				var exampleCallback = function() {
-        				console.log('Order complete!');
-    				};
-
-    				window.EBWidgets.createWidget({
-        				// Required
-        				widgetType: 'checkout',
-        				eventId: '396312540477',
-        				iframeContainerId: 'eventbrite-widget-container-396312540477',
-
-        				// Optional
-        				iframeContainerHeight: 625,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-        				onOrderComplete: exampleCallback  // Method called when an order has successfully completed
-    				});
-				</script>
-		    </div>
 		</div>
           </div>
         </div>
