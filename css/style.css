@@ -8162,7 +8162,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.4;
   color: #2c396b;
   font-weight: 400;
-  font-family: 'Forum', sans-serif; }
+  font-family: 'Poppins', sans-serif; }
 
 .text-primary {
   color: #ffb5b5 !important; }
@@ -8202,7 +8202,7 @@ h1, h2, h3, h4, h5,
     font-weight: 400;
     color: #2c396b;
     text-transform: uppercase;
-    font-family: 'Forum', sans-serif;
+    font-family: 'Poppins', sans-serif;
     position: relative;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:after {
