@@ -1,5 +1,5 @@
 .subscribe {
-    background-color: #92278f;
+    background-color: #AF0040;
     padding: 55px 0px;
     position: relative;
     font-family: 'Bubblegum Sans', cursive;
@@ -33,7 +33,7 @@
 .subscribe form input:first-child {
     border: 2px solid rgba(255, 255, 255, .5);
     padding: 16px 20px;
-    background-color: #92278f;
+    background-color: #AF0040;
     color: #fff;
     font-style: italic;
     border-radius: 2px;
@@ -43,7 +43,7 @@
 
 .subscribe form input:last-child {
     background-color: #fff;
-    color: #92278f;
+    color: #AF0040;
     font-size: 16px;
     font-style: italic;
     font-weight: 700;
