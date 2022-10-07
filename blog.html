@@ -75,12 +75,22 @@
 			          <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li>
 			          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 			          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>-->
-              <li class="nav-item"><a href="classes.html" class="nav-link" style="font-family: 'Forum';">Services</a>
-              </li>
-              <li class="nav-item"><a href="schedule.html" class="nav-link" style="font-family: 'Forum';">Schedule</a>
-              </li>
+                <li class="nav-item">
+                  <a href="javascript:void(0)" class="nav-link servicesbtn" onclick="myServicesFunction()" style="font-family: 'Forum';">Services</a>
+                  <div class="services-content" id="myServices">
+                    <a href="classes.html">Classes</a>
+                    <a href="offerings.html">Offerings</a>
+                  </div>
+                </li>
+              <li class="nav-item"><a href="schedule.html" class="nav-link" style="font-family: 'Forum';">Schedule</a></li>
               <li class="nav-item active"><a href="blog.html" class="nav-link" style="font-family: 'Forum';" title='Blogs'>Seeds</a></li>
-              <li class="nav-item"><a href="about.html" class="nav-link" style="font-family: 'Forum';" title='About'>Roots</a></li>
+              <li class="nav-item">
+								<a href="javascript:void(0)" class="nav-link rootsbtn" onclick="myRootsFunction()" style="font-family: 'Forum';" title='About'>Roots</a>
+								<div class="roots-content" id="myRoots">
+									<a href="about.html">Alyssa</a>
+									<a href="concept.html">Concept</a>
+								</div>
+							</li>
               <li class="nav-item"><a href="shop.html" class="nav-link" style="font-family: 'Forum';">Fruits</a></li>
               <li class="nav-item"><a href="contact.html" class="nav-link" style="font-family: 'Forum';">Contact</a></li>
             </ul>
@@ -441,7 +451,105 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <style>
+		.name {
+			color: pink;
+		}
 
+		.work {
+			font-weight: bold;
+			font-size: 15px;
+		}
+
+		.about span {
+			font-size: 13px;
+		}
+
+		.v-profile {
+			color: pink;
+			cursor: pointer;
+		}
+
+		.box {
+			-webkit-box-shadow: 13px 12px 5px -10px rgba(196, 194, 196, 0.72);
+			-moz-box-shadow: 13px 12px 5px -10px rgba(196, 194, 196, 0.72);
+			box-shadow: 13px 12px 5px -10px rgba(196, 194, 196, 0.72);
+		}
+
+		.services-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		.services-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.services-content a:hover {
+			background-color: #ddd;
+		}
+
+		.roots-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		.roots-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.roots-content a:hover {
+			background-color: #ddd;
+		}
+
+		.show {
+			display: block;
+		}
+	</style>
+	<script>
+		/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+		function myServicesFunction() {
+			document.getElementById("myServices").classList.toggle("show");
+		}
+		function myRootsFunction() {
+			document.getElementById("myRoots").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function (e) {
+			if (!e.target.matches('.servicesbtn')) {
+				var myDropdown = document.getElementById("myServices");
+				if (myDropdown.classList.contains('show')) {
+					myDropdown.classList.remove('show');
+				}
+			}
+			if (!e.target.matches('.rootsbtn')) {
+				var myDropdown = document.getElementById("myRoots");
+				if (myDropdown.classList.contains('show')) {
+					myDropdown.classList.remove('show');
+				}
+			}
+		}
+	</script>
 </body>
 
 </html>
