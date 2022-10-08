@@ -110,19 +110,19 @@
 	<!-- END nav -->
 
 	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/banner.jpg');"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-        <div class="col-md-9 ftco-animate text-center">
-          <h1 class="mb-3 bread" style="font-family: 'Zeyada';font-size: 65px;">Concept</h1>
-          <!--p class="breadcrumbs"><span class="mr-2"><a href="index.html"
+		data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+				<div class="col-md-9 ftco-animate text-center">
+					<h1 class="mb-3 bread" style="font-family: 'Zeyada';font-size: 65px;">Concept</h1>
+					<!--p class="breadcrumbs"><span class="mr-2"><a href="index.html"
                 style="font-family: 'Poppins';font-size: 45px;">Home</a></span> <span
               style="font-family: 'Poppins';font-size: 45px;">Schedule</span></p-->
-        </div>
-      </div>
-    </div>
-  </section>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section class="ftco-section" style="padding:3em 0;">
 		<div class="container">
@@ -139,8 +139,8 @@
 						</div>
 						<div class="text text-left pl-4">
 							<h3>Embody</h3>
-							<p>Deepen mind and body connection<br/>
-							Raise awareness of body, sensations, and emotions</p>
+							<p>Deepen mind and body connection<br />
+								Raise awareness of body, sensations, and emotions</p>
 						</div>
 					</div>
 				</div>
@@ -276,8 +276,8 @@
 				</div>
 				<div class="col-lg-7 col-xs-12">
 					<form action="/">
-						<input type="text" placeholder="Enter your e-mail here" style="font-family: 'Forum'">
-						<input type="submit" value="Subscribe Now" style="font-family: 'Forum'">
+						<input type="text" placeholder="Enter your e-mail here" style="font-family: 'Forum'"id="emailId">
+						<input type="button" onclick="subscribeNewsLetter()" value="Subscribe Now" style="font-family: 'Forum'">
 					</form>
 				</div>
 			</div><!-- row -->
@@ -490,6 +490,14 @@ toggle between hiding and showing the dropdown content */
 					myDropdown.classList.remove('show');
 				}
 			}
+		}
+		function subscribeNewsLetter() {
+			const xhttp = new XMLHttpRequest();
+			xhttp.onload = function () {
+				alert(this.responseText);
+			}
+			xhttp.open("GET", "https://seedsnsaplings.herokuapp.com/api/v1/socialconnection/user/subscribeNewsLetter/" + document.getElementById('emailId').value);
+			xhttp.send();
 		}
 	</script>
 </body>

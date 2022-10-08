@@ -140,9 +140,12 @@
 								Through my experiences working as a teacher at pre-K + elementary enrichment programs, I
 								am an adult that respects and hears kids.<br /><br />
 								I truly enjoy working with them, as their world is incredibly wide and open!<br />
-								I look forward to meeting you and supporting your children as they bloom and grow.</p>***
-							<br/><br/>
-							<p><h1 style="color:#228B22;font-family: 'Zeyada';">Credentials</h1></p>
+								I look forward to meeting you and supporting your children as they bloom and grow.</p>
+							***
+							<br /><br />
+							<p>
+							<h1 style="color:#228B22;font-family: 'Zeyada';">Credentials</h1>
+							</p>
 							<p
 								style='text-align: center!important;font-family: "Sawarabi Gothic", sans-serif;font-size: 20px;'>
 								200-Hour Registered Yoga Teacher
@@ -162,7 +165,7 @@
 								style='text-align: center!important;font-family: "Sawarabi Gothic", sans-serif;font-size: 20px;'>
 								Pretzel Kids Yoga Teacher
 								<li>Certification in the <a href="https://www.pretzelkids.com/" target="_blank">Pretzel
-										Kids methodology</a> for teaching developmentally<br/>
+										Kids methodology</a> for teaching developmentally<br />
 									appropriate age groups in school settings and beyond</li>
 							</p>
 							<p
@@ -309,8 +312,8 @@
 				</div>
 				<div class="col-lg-7 col-xs-12">
 					<form action="/">
-						<input type="text" placeholder="Enter your e-mail here" style="font-family: 'Forum'">
-						<input type="submit" value="Subscribe Now" style="font-family: 'Forum'">
+						<input type="text" placeholder="Enter your e-mail here" style="font-family: 'Forum'"id="emailId">
+						<input type="button" onclick="subscribeNewsLetter()" value="Subscribe Now" style="font-family: 'Forum'">
 					</form>
 				</div>
 			</div><!-- row -->
@@ -523,6 +526,14 @@ toggle between hiding and showing the dropdown content */
 					myDropdown.classList.remove('show');
 				}
 			}
+		}
+		function subscribeNewsLetter() {
+			const xhttp = new XMLHttpRequest();
+			xhttp.onload = function () {
+				alert(this.responseText);
+			}
+			xhttp.open("GET", "https://seedsnsaplings.herokuapp.com/api/v1/socialconnection/user/subscribeNewsLetter/" + document.getElementById('emailId').value);
+			xhttp.send();
 		}
 	</script>
 </body>
