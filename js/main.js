@@ -287,3 +287,21 @@
 
 })(jQuery);
 
+//Save Subscribers
+async function saveNewPerson() {
+	if (document.getElementById('emailId').value != null && document.getElementById('emailId').value != '') {
+		const subscribers = new Parse.Object("Subscribers");
+		subscribers.set("email", document.getElementById("emailId").value);
+		try {
+			let result = await subscribers.save();
+			document.getElementById("emailId").value = '';
+			document.getElementById("response").innerHTML = 'Thanks for subscribining to our newsletter. We will get in touch with you soon.';
+		} catch (error) {
+			document.getElementById("response").innerHTML = 'You were not subscribed.';
+		}
+	} else {
+		document.getElementById("response").innerHTML = 'No Email id entered.';
+	}
+
+}
+

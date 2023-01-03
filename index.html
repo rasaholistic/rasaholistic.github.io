@@ -45,12 +45,10 @@
 
     gtag('config', 'G-C8RGSLETDF');
   </script>
-  <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "d3ohvxyhg7");
+<script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script>
+    Parse.initialize("SJBNaztYFVEw3PCnAvlQtfxOWfV1Q3k9oiHlSDi9", "K68dth8FifYVAtj9QlTafh1Sv5vgU7A2O5Kl7BHb");
+    Parse.serverURL = "https://parseapi.back4app.com/";
   </script>
 </head>
 
@@ -444,8 +442,9 @@
         <div class="col-lg-7 col-xs-12">
           <form action="\">
             <input type="text" placeholder="Enter your e-mail here" style="font-family: 'Forum'" id="emailId">
-            <input type="button" onclick="subscribeNewsLetter()" value="Subscribe Now" style="font-family: 'Forum'">
+            <input type="button" onclick="saveNewPerson()" value="Subscribe Now" style="font-family: 'Forum'">
           </form>
+          <span id="response"></span>
         </div>
       </div><!-- row -->
     </div><!-- container -->
