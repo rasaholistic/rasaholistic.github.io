@@ -305,3 +305,47 @@ async function saveNewPerson() {
 
 }
 
+//Save support
+async function saveNewSupport() {
+	if (document.getElementById("userName").value != null && document.getElementById("userName").value != '') {
+		if (document.getElementById("userEmailId").value != null && document.getElementById("userEmailId").value != '') {
+			if (document.getElementById("subject").value != null && document.getElementById("subject").value != '') {
+				if (document.getElementById("message").value != null && document.getElementById("message").value != '') {
+					const support = new Parse.Object("Support");
+					support.set("name", document.getElementById("userName").value);
+					support.set("email", document.getElementById("userEmailId").value);
+					support.set("subject", document.getElementById("subject").value);
+					support.set("message", document.getElementById("message").value);
+					try {
+						let result = await support.save()
+						console.log('New support created with objectId: ' + result.id);
+						document.getElementById("userName").value = '';
+						document.getElementById("userEmailId").value = '';
+						document.getElementById("subject").value = '';
+						document.getElementById("message").value = '';
+						document.getElementById("response").innerHTML = 'Thanks for submitting your message. We will get in touch with you soon.';
+					} catch (error) {
+						console.log('Failed to save new support, with error code: ' + error.message);
+						document.getElementById("response").innerHTML = 'Your support ticket was not created';
+					}
+				} else {
+					console.log('No message entered, with error code: ');
+					document.getElementById("response").innerHTML = 'No message entered';
+				}
+			}
+			else {
+				console.log('No subject entered, with error code: ');
+				document.getElementById("response").innerHTML = 'No subject entered';
+			}
+		}
+		else {
+			console.log('No Email Id entered, with error code: ');
+			document.getElementById("response").innerHTML = 'No Email id entered';
+		}
+	}
+	else {
+		console.log('No name entered, with error code: ');
+		document.getElementById("response").innerHTML = 'No name entered';
+	}
+}
+
