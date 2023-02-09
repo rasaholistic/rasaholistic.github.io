@@ -20,8 +20,8 @@
     left: 1em;
     right: 1em;
     z-index: 10;
-    max-width: 1000px;
-    max-height: 600px;
+    max-width: 1200px;
+    max-height: 720px;
     perspective: 30px;
 }
 .tiler .cell {
@@ -59,7 +59,7 @@ html {
 body {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 1080px;
     padding: 2em;
     margin: auto;
 }
