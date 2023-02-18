@@ -43,12 +43,12 @@
 
     gtag('config', 'G-C8RGSLETDF');
   </script>
-<script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   <script>
     Parse.initialize("SJBNaztYFVEw3PCnAvlQtfxOWfV1Q3k9oiHlSDi9", "K68dth8FifYVAtj9QlTafh1Sv5vgU7A2O5Kl7BHb");
     Parse.serverURL = "https://parseapi.back4app.com/";
   </script>
-  
+
 </head>
 
 <body style="font-family: 'Forum';font-size:20px;background-color: #E6E6FA;">
@@ -87,6 +87,8 @@
                 <a href="blog.html" class="nav-link" style="font-family: 'Forum';" title='Blogs'>Seeds
                 </a>
               </li>
+              <li class="nav-item"><a href="expressivearts.html" class="nav-link" style="font-family: 'Forum';"
+                  title='Expressive Arts'>Expressions</a></li>
               <li class="nav-item">
                 <a href="javascript:void(0)" class="nav-link rootsbtn" onclick="myRootsFunction()"
                   style="font-family: 'Forum';" title='About'>Roots</a>
@@ -150,7 +152,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Name" id ="userName">
+                  <input type="text" class="form-control" placeholder="Your Name" id="userName">
                 </div>
               </div>
               <div class="col-md-6">
@@ -218,8 +220,8 @@
                     class="icon-facebook"></span></a></li>
               <li class="ftco-animate"><a href="https://www.instagram.com/seeds_and_saplings" target="_blank"><span
                     class="icon-instagram"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.linkedin.com/company/seeds-n-saplings/" target="_blank"><span
-                    class="icon-linkedin"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.linkedin.com/company/seeds-n-saplings/"
+                  target="_blank"><span class="icon-linkedin"></span></a></li>
             </ul>
           </div>
         </div>
@@ -423,10 +425,10 @@ toggle between hiding and showing the dropdown content */
       xhttp.setRequestHeader("Content-type", "application/json");
       var data = JSON.stringify(
         {
-          "name": document.getElementById('userName').value, 
-          "emailId": document.getElementById('userEmailId').value, 
-          "subject" : document.getElementById('subject').value, 
-          "message":document.getElementById('message').value
+          "name": document.getElementById('userName').value,
+          "emailId": document.getElementById('userEmailId').value,
+          "subject": document.getElementById('subject').value,
+          "message": document.getElementById('message').value
         }
       );
       xhttp.send(data);
