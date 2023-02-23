@@ -5,7 +5,8 @@
   <title>Seeds and Saplings - Blog</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name='description' content='Mindful movement, Expressive arts, Yoga for kids, eco-friendly products, newsletters and blogs for kids and parenting'>
+  <meta name='description'
+    content='Mindful movement, Expressive arts, Yoga for kids, eco-friendly products, newsletters and blogs for kids and parenting'>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
@@ -85,8 +86,15 @@
               </li>
               <li class="nav-item active"><a href="blog.html" class="nav-link" style="font-family: 'Forum';"
                   title='Blogs'>Seeds</a></li>
-              <li class="nav-item"><a href="expressivearts.html" class="nav-link" style="font-family: 'Forum';"
-                  title='Expressive Arts'>Expressions</a></li>
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link expressiveartsbtn" onclick="myExpressiveArtsFunction()"
+                  style="font-family: 'Forum';" title='Expressive Arts'>Expressions</a>
+                <div class="roots-content" id="myExpressiveArts">
+                  <a href="leaves.html">Painted Leaf Wreaths</a>
+                  <a href="trunks.html">Still Life Drawings</a>
+                  <a href="plantings.html">Your Mess is a Masterpiece</a>
+                </div>
+              </li>
               <li class="nav-item">
                 <a href="javascript:void(0)" class="nav-link rootsbtn" onclick="myRootsFunction()"
                   style="font-family: 'Forum';" title='About'>Roots</a>
@@ -124,7 +132,7 @@
   <section class="ftco-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 ftco-animate">
+        <div class="col-lg-12 ftco-animate">
           <div class="row">
             <div class="col-md-12 d-flex ftco-animate">
               <div class="blog-entry blog-entry-2 justify-content-end d-md-flex w-100">
@@ -227,7 +235,7 @@
             </div>
           </div>-->
         </div> <!-- .col-md-8 -->
-        <div class="col-lg-4 sidebar ftco-animate">
+        <!--div class="col-lg-4 sidebar ftco-animate">
           <div class="sidebar-box">
             <form action="#" class="search-form">
               <div class="form-group">
@@ -265,7 +273,7 @@
                 </div>
               </div>
             </div>
-            <!--<div class="block-21 mb-4 d-flex">
+            <<div class="block-21 mb-4 d-flex">
               <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
               <div class="text">
                 <h3 class="heading"><a href="#">Is wellness the new luxury</a></h3>
@@ -286,7 +294,7 @@
                   <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                 </div>
               </div>
-            </div>-->
+            </div>
           </div>
 
           <div class="sidebar-box ftco-animate">
@@ -307,7 +315,7 @@
             <h3 class="heading-2">Paragraph</h3>
             <p>Just do yoga 9 times.</p>
           </div>
-        </div>
+        </div-->
 
       </div>
     </div>
@@ -521,7 +529,9 @@ toggle between hiding and showing the dropdown content */
     function myRootsFunction() {
       document.getElementById("myRoots").classList.toggle("show");
     }
-
+    function myExpressiveArtsFunction() {
+      document.getElementById("myExpressiveArts").classList.toggle("show");
+    }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (e) {
       if (!e.target.matches('.servicesbtn')) {
@@ -532,6 +542,12 @@ toggle between hiding and showing the dropdown content */
       }
       if (!e.target.matches('.rootsbtn')) {
         var myDropdown = document.getElementById("myRoots");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+      if (!e.target.matches('.expressiveartsbtn')) {
+        var myDropdown = document.getElementById("myExpressiveArts");
         if (myDropdown.classList.contains('show')) {
           myDropdown.classList.remove('show');
         }

@@ -5,7 +5,8 @@
   <title>Seeds and Saplings - Services Classes</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name='description' content='Mindful movement, Expressive arts, Yoga for kids, eco-friendly products, newsletters and blogs for kids and parenting'>
+  <meta name='description'
+    content='Mindful movement, Expressive arts, Yoga for kids, eco-friendly products, newsletters and blogs for kids and parenting'>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
@@ -86,8 +87,15 @@
               </li>
               <li class="nav-item"><a href="blog.html" class="nav-link" style="font-family: 'Forum';"
                   title='Blogs'>Seeds</a></li>
-              <li class="nav-item"><a href="expressivearts.html" class="nav-link" style="font-family: 'Forum';"
-                  title='Expressive Arts'>Expressions</a></li>
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link expressiveartsbtn" onclick="myExpressiveArtsFunction()"
+                  style="font-family: 'Forum';" title='Expressive Arts'>Expressions</a>
+                <div class="roots-content" id="myExpressiveArts">
+                  <a href="leaves.html">Painted Leaf Wreaths</a>
+                  <a href="trunks.html">Still Life Drawings</a>
+                  <a href="plantings.html">Your Mess is a Masterpiece</a>
+                </div>
+              </li>
               <li class="nav-item">
                 <a href="javascript:void(0)" class="nav-link rootsbtn" onclick="myRootsFunction()"
                   style="font-family: 'Forum';" title='About'>Roots</a>
@@ -389,7 +397,9 @@ toggle between hiding and showing the dropdown content */
     function myRootsFunction() {
       document.getElementById("myRoots").classList.toggle("show");
     }
-
+    function myExpressiveArtsFunction() {
+      document.getElementById("myExpressiveArts").classList.toggle("show");
+    }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (e) {
       if (!e.target.matches('.servicesbtn')) {
@@ -400,6 +410,12 @@ toggle between hiding and showing the dropdown content */
       }
       if (!e.target.matches('.rootsbtn')) {
         var myDropdown = document.getElementById("myRoots");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+      if (!e.target.matches('.expressiveartsbtn')) {
+        var myDropdown = document.getElementById("myExpressiveArts");
         if (myDropdown.classList.contains('show')) {
           myDropdown.classList.remove('show');
         }
