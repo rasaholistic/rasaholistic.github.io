@@ -80,12 +80,13 @@
               </li>
               <li class="nav-item"><a href="schedule.html" class="nav-link" style="font-family: 'Forum';">Schedule</a>
               </li>
-              <li class="nav-item"><a href="blog.html" class="nav-link" style="font-family: 'Forum';"
-                  title='Blogs'>Seeds</a></li>
+              
               <li class="nav-item">
-                <a href="javascript:void(0)" class="nav-link expressiveartsbtn" onclick="myExpressiveArtsFunction()"
-                  style="font-family: 'Forum';" title='Expressive Arts'>Expressions</a>
-                <div class="roots-content" id="myExpressiveArts">
+                <a href="javascript:void(0)" class="nav-link seedsbtn" onclick="mySeedsFunction()"
+                  style="font-family: 'Forum';" title='Seeds'>Seeds</a>
+                <div class="roots-content" id="mySeeds">
+                  <a href="blog.html">Blogs</a>
+                  <a href="leaves.html">Expressions</a>
                   <a href="leaves.html">Painted Leaf Wreaths</a>
                   <a href="trunks.html">Still Life Drawings</a>
                   <a href="plantings.html">Your Mess is a Masterpiece</a>
@@ -577,8 +578,8 @@ toggle between hiding and showing the dropdown content */
     function myRootsFunction() {
       document.getElementById("myRoots").classList.toggle("show");
     }
-    function myExpressiveArtsFunction() {
-      document.getElementById("myExpressiveArts").classList.toggle("show");
+    function mySeedsFunction() {
+      document.getElementById("mySeeds").classList.toggle("show");
     }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (e) {
@@ -594,8 +595,8 @@ toggle between hiding and showing the dropdown content */
           myDropdown.classList.remove('show');
         }
       }
-      if (!e.target.matches('.expressiveartsbtn')) {
-        var myDropdown = document.getElementById("myExpressiveArts");
+      if (!e.target.matches('.seedsbtn')) {
+        var myDropdown = document.getElementById("mySeeds");
         if (myDropdown.classList.contains('show')) {
           myDropdown.classList.remove('show');
         }

@@ -70,13 +70,7 @@
                 <div class="col-12 w-100 text-center">
                     <div class="collapse navbar-collapse" id="ftco-nav">
                         <ul class="navbar-nav m-auto">
-                            <!--<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-			          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
-			          <li class="nav-item"><a href="trainer.html" class="nav-link">Trainer</a></li>
-			          <li class="nav-item"><a href="classes.html" class="nav-link">Workshops</a></li>
-			          <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li>
-			          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-			          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>-->
+                            
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link servicesbtn" onclick="myServicesFunction()"
                                     style="font-family: 'Forum';">Services</a>
@@ -88,14 +82,15 @@
                             <li class="nav-item"><a href="schedule.html" class="nav-link"
                                     style="font-family: 'Forum';">Schedule</a>
                             </li>
-                            <li class="nav-item"><a href="blog.html" class="nav-link" style="font-family: 'Forum';"
-                                    title='Blogs'>Seeds</a></li>
+                            
                             <li class="nav-item active">
-                                <a href="javascript:void(0)" class="nav-link expressiveartsbtn"
-                                    onclick="myExpressiveArtsFunction()" style="font-family: 'Forum';"
-                                    title='Expressive Arts'>Expressions</a>
-                                <div class="roots-content" id="myExpressiveArts">
-                                    <a href="leaves.html">Painted Leaf Wreaths</a>
+                                <a href="javascript:void(0)" class="nav-link seedsbtn"
+                                    onclick="mySeedsFunction()" style="font-family: 'Forum';"
+                                    title='Seeds'>Seeds</a>
+                                <div class="roots-content" id="mySeeds">
+                                    <a href="blog.html">Blogs</a>
+                  <a href="leaves.html">Expressions</a>
+                  <a href="leaves.html">Painted Leaf Wreaths</a>
                                     <a href="trunks.html">Still Life Drawings</a>
                                     <a href="plantings.html">Your Mess is a Masterpiece</a>
                                 </div>
@@ -384,8 +379,8 @@
         function myRootsFunction() {
             document.getElementById("myRoots").classList.toggle("show");
         }
-        function myExpressiveArtsFunction() {
-            document.getElementById("myExpressiveArts").classList.toggle("show");
+        function mySeedsFunction() {
+            document.getElementById("mySeeds").classList.toggle("show");
         }
 
         // Close the dropdown if the user clicks outside of it
@@ -402,8 +397,8 @@
                     myDropdown.classList.remove('show');
                 }
             }
-            if (!e.target.matches('.expressiveartsbtn')) {
-                var myDropdown = document.getElementById("myExpressiveArts");
+            if (!e.target.matches('.seedsbtn')) {
+                var myDropdown = document.getElementById("mySeeds");
                 if (myDropdown.classList.contains('show')) {
                     myDropdown.classList.remove('show');
                 }
